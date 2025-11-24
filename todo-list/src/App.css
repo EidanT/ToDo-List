@@ -1,0 +1,158 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+}
+
+.app {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; 
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.app > input[type="text"],
+.app > button,
+.app > select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+}
+
+.app > input[type="text"] {
+    width: calc(100% - 100px); 
+    margin-right: 5px;
+}
+
+.app > button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 90px;
+}
+
+.app > button:hover {
+    background-color: #0056b3;
+}
+
+.app > select {
+    width: 100%; 
+    margin-top: 10px;
+}
+
+.input-container {
+    display: flex;
+    gap: 8px; 
+    margin-bottom: 15px;
+}
+
+.app > input[type="text"] {
+    flex-grow: 1; 
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+    transition: background-color 0.2s;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+li input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+li span {
+    flex-grow: 1; 
+    padding: 0 10px;
+    word-break: break-word; 
+}
+
+li button {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+li button:hover {
+    color: #cc0000;
+}
+
+
+@media (min-width: 600px) {
+    .app {
+        padding: 30px;
+    }
+
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .input-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .app > input[type="text"] {
+        width: auto; 
+        flex-grow: 1;
+        margin-right: 0; 
+    }
+
+    .app > button {
+        width: 120px; 
+    }
+
+    .app > select {
+        width: 200px; 
+        margin-top: 0;
+    }
+
+    li {
+        padding: 15px 20px;
+    }
+}
