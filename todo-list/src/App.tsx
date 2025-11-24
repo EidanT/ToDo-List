@@ -16,6 +16,11 @@ export default function App() {
     setTasks([...tasks, { id: Date.now(), text }]);
     setText("");
   }
+  
+  function deleteTask(id: number) {
+    setTasks(tasks.filter(t => t.id !== id));
+  }
+
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center p-4">
@@ -39,10 +44,18 @@ export default function App() {
           {tasks.map((t) => (
             <li
               key={t.id}
-              className="p-3 bg-gray-200 rounded-xl border border-gray-300"
+              className="p-3 bg-gray-200 rounded-xl border border-gray-300 flex justify-between items-center"
             >
-              {t.text}
+              <span>{t.text}</span>
+
+              <button
+                onClick={() => deleteTask(t.id)}
+                className="px-3 py-1 bg-red-500 text-white text-sm rounded-lg hover:bg-red-600 transition"
+              >
+                Delete
+              </button>
             </li>
+
           ))}
         </ul>
       </div>
